@@ -16,7 +16,7 @@ int main() {
     struct sockaddr_in server;
     server.sin_family = AF_INET;
     server.sin_port = htons(7);
-    inet_pton(AF_INET, "172.16.40.13", &server.sin_addr);
+    inet_pton(AF_INET, "172.16.40.1", &server.sin_addr);
 
     if (connect(sock, (struct sockaddr*)&server, sizeof(server)) < 0) {
         cerr << "Не удалось подключиться к серверу" << endl;
